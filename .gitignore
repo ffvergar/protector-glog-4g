@@ -1,0 +1,6 @@
+# salidas de Blender y pruebas de render
+render_blender/log*.txt
+render_blender/prueba_*.png
+render_blender/chk.png
+desktop.ini
+Thumbs.db

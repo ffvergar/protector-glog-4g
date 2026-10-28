@@ -1,0 +1,62 @@
+PROTECTOR CONTRA LLUVIA Y SOL - REGISTRADOR GLog 4G GPS
+Guía de impresión 3D y montaje
+=========================================================
+
+ARCHIVOS
+  STL/1_placa.stl            Placa trasera (110 x 200 x 18 mm)
+  STL/2_techo.stl            Techo con gotero y aletas (110 x 72 x 66 mm)
+  STL/3_repisa.stl           Repisa donde se apoya el equipo (80 x 25 x 18 mm)
+  STL/0_ensamble_ref.stl     Solo de referencia, para ver cómo van las piezas. NO imprimir.
+  Vista_previa_STL.png       Imagen de las piezas armadas y de cómo van en la cama
+  Plano_Protector_GLog_4G_GPS.pdf   Plano con medidas
+  Render_*.png               Imágenes del resultado instalado
+
+Los STL ya vienen orientados para imprimir (en mm). No hace falta girarlos.
+Cama mínima: 220 x 220 mm. Son 2 impresiones:
+  Impresión 1: la placa sola
+  Impresión 2: el techo y la repisa juntos
+
+MATERIAL
+  PETG (perfil genérico PETG de la Creality K1). Resiste la intemperie y el calor.
+  NO usar PLA: se deforma con el sol y el calor.
+  Color: blanco o gris muy claro, para que el equipo no se caliente.
+  No usar filamentos con carga metálica o de carbono, porque pueden afectar la señal 4G y GPS.
+
+AJUSTES SUGERIDOS
+  Boquilla / capa:  0,4 mm / 0,2 mm, ancho de línea 0,42-0,45 mm
+  Paredes:          4 perímetros (mínimo 1,6 mm)
+  Capas sup./inf.:  5
+  Relleno:          30-40 % (giroide o cúbico)
+  Soportes:         NO hacen falta. Los agujeros y alojamientos de tuercas se imprimen como puentes cortos.
+  Adherencia:       borde (brim) de 5 mm en la placa. Tapa de la K1 cerrada (si la boquilla se tapa, sacar la tapa superior).
+  Consumo aprox.:   unos 105-130 g de PETG en total.
+
+TORNILLERÍA (acero inoxidable)
+  4 tornillos M3 x 10 mm cabeza avellanada + 4 tuercas M3
+      (2 para fijar el techo y 2 para la repisa. Se meten desde atrás de la placa
+       y la tuerca queda encajada en su alojamiento hexagonal.)
+  Para muro:  3 tornillos 4 x 40 mm + 3 tarugos de 6 mm
+  Para poste: 2 abrazaderas sin fin de acero inoxidable, banda de 12 mm
+              (poste de 40 a 90 mm de diámetro). Pasan por las ranuras de la placa.
+
+MONTAJE
+  1. Poner las tuercas M3 en los alojamientos hexagonales del techo y de la repisa.
+  2. Atornillar la repisa a la placa (2 x M3, desde atrás).
+  3. Atornillar el techo a la placa (2 x M3, desde atrás). La pestaña del techo
+     queda apoyada contra la parte alta de la placa.
+  4. Fijar la placa al muro o al poste.
+  5. Apoyar el equipo en la repisa, contra los 4 separadores, y pasar su asa
+     por el gancho superior.
+
+ANTES DE IMPRIMIR TODO, VERIFICAR CON EL EQUIPO REAL
+  - El gancho está a unos 6 mm sobre el borde superior del equipo. Comprobar que el asa
+    del equipo alcanza a engancharse. Si no alcanza, sujetar el equipo con una cinta
+    de velcro.
+  - Medidas del equipo usadas en el diseño: 68,5 x 105,5 x 16,5 mm (según la ficha técnica).
+    La repisa deja 0,3 mm de holgura.
+  - Si la impresora deja los agujeros chicos, repasarlos con una broca de 3,5 mm (M3) o de 6 mm (muro).
+
+INSTALACIÓN
+  - Entre 1,5 y 2 m de altura, con el frente hacia el sur (en Chile) para evitar el sol directo.
+  - Los costados abiertos y la separación de 5 mm detrás del equipo dejan pasar el aire,
+    para que la medición de temperatura y humedad sea representativa.

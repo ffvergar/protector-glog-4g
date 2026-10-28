@@ -1,0 +1,146 @@
+PROTECTOR CON PERSIANA (VERSIÓN INVERNADERO) - REGISTRADOR GLog 4G
+Guía de impresión 3D (Creality K1) y montaje
+=========================================================
+
+Es el protector original (placa + techo + repisa) más una PERSIANA de lamas horizontales
+a 45° (tipo abrigo meteorológico), que cierra el frente y los costados. Protege al equipo del agua de riego y del sol
+directo, pero deja circular el aire para que la temperatura y la humedad se midan bien.
+El aire entra por las ranuras del piso y entre las lamas, y sale por arriba,
+bajo el techo.
+
+ARCHIVOS (carpeta STL) - YA VIENEN ORIENTADOS PARA IMPRIMIR, NO GIRARLOS
+  1_placa_v2.stl    Placa trasera (110 x 200 x 18 mm), cara trasera sobre la cama.
+                    Es la placa original con 4 agujeros guía de 2,5 mm para la persiana.
+  2_techo.stl       Techo con gotero y aletas (110 x 72 x 66 mm). Igual al original.
+  3_repisa.stl      Repisa del equipo (80 x 25 x 18 mm). Igual a la original.
+  4_persiana_v5.stl Persiana (108 x 40 x 134 mm), DE PIE, con el piso ranurado sobre la cama.
+                    VERSIÓN RECOMENDADA. ~110 g.
+  5_cuna_v1.stl     CUNA para el equipo (73,5 x 113,4 x 25,6 mm), ACOSTADA sobre la espalda.
+                    Reemplaza a 3_repisa. ~18 g.
+  5_cuna_v1_prueba_ajuste.stl  Probeta (bolsillo de abajo + franja de lengüetas). ~8 g.
+                    IMPRIMIR PRIMERO y probar con el equipo real.
+  4_persiana_v4.stl Lamas + chaflanes, sin marco en las muescas (se guarda para comparar).
+  4_persiana_v3.stl Lamas horizontales sin chaflanes (se guarda para comparar).
+  4_persiana_v2.stl / 4_persiana_v1.stl  Versiones anteriores de aletas verticales
+                    (NO imprimir: vibran). Se guardan para comparar.
+
+VERSIONES DE LA PERSIANA (no se borra ninguna, para poder escoger)
+  v1 (27-oct): aletas verticales en V, sueltas en toda la altura (~130 mm).
+       Resultado real en la K1: las aletas vibran con la boquilla y salen onduladas y
+       con hilos. Imagen: Imagenes\Vista_impresion_persiana_v1.png
+  v2 (27-oct): igual a v1 + amarras horizontales cada ~21 mm (bandas de 1,6 mm por fuera
+       y por dentro) que unen todas las aletas al marco. Misma medida y mismo montaje.
+       Imágenes: Imagenes\Vista_impresion_persiana_v2.png y Render_*_persiana_v2.png
+       Resultado real (28-oct): igual vibró a media altura; las aletas siguen siendo
+       torres altas de 2 mm. Descartada.
+  v3 (28-oct): LAMAS HORIZONTALES a 45°, como se pidió. Cada lama sube hacia adentro a 45°
+       (sin soportes) y amarra el marco cada 6 mm: ya no hay torres sueltas. Montantes de
+       1,8 mm cada ~24 mm en el frente y uno al medio de cada costado (puentes de 12-22 mm).
+       Lamas de 1,8 mm medidas en la capa (4 líneas), 7 mm de profundidad, paso 6 mm:
+       no se ve ni entra agua en línea recta. Mismas medidas exteriores y mismo montaje.
+       Imagen: Imagenes\Vista_impresion_persiana_v3.png
+  v4 (28-oct): v3 + CHAFLANES de 45° en las dos puntas de cada ventana, contra cada
+       montante: la ventana cierra en punta (<====>) y su techo deja de ser un puente
+       plano. El chaflán sigue la lama en toda su profundidad. Bajo el aro superior,
+       chaflanes de 3 mm. Superficie plana colgante: 855 -> 566 mm². ~100 g de PETG.
+       Imágenes: Imagenes\Vista_impresion_persiana_v4.png y Detalle_chaflanes_persiana_v4.png
+
+  v5 (28-oct): v4 + marco en L (poste + solera) alrededor de las muescas de los tornillos
+       de muro: las lamas de las esquinas superiores traseras ya no quedan sueltas.
+       Piso con cumbreras en V hacia las ranuras y rellenos inclinados: no empoza agua.
+
+CUNA DEL EQUIPO (5_cuna_v1, nueva 28-oct)
+  El GLog no tiene tornillos: la cuna lo sujeta por los 6 lados.
+    Abajo:    3 nervios de apoyo (el agua cae entre ellos; nada plano donde empoce).
+    Adelante: 2 pestañas abajo (esquinas) + 2 ganchos arriba, montan 2 mm sobre el borde.
+    Arriba:   2 lengüetas flexibles (clic). Holgura en alto 0,3 mm.
+    Atrás:    los 4 separadores de la placa.
+    Costados: 6 nervios de ajuste que aprietan 0,2 mm por lado (absorben tolerancias).
+  Medidas usadas (ficha): 68,5 x 105,5 x 16,5 mm. Si el equipo real mide distinto,
+  se cambian en la línea EQ_W, EQ_H, EQ_T de render_blender\cuna_v1.py.
+  Montaje:
+    1. Tuercas M3 en los 2 hexágonos del bloque inferior (desde el frente).
+    2. Tornillos M3 x 8 avellanados desde atrás de la placa, en los agujeros de la repisa.
+       (NO usar los M3 x 10 de la repisa: asoman 1 mm hacia el equipo.)
+    3. Equipo inclinado: apoyar su base en los nervios, detrás de las 2 pestañas.
+    4. Empujar la parte de arriba hacia atrás hasta el clic de las lengüetas.
+    Sacar: levantar las 2 lengüetas con un dedo e inclinar el equipo hacia adelante.
+
+VERIFICACIÓN DEL PRODUCTO (28-oct, verificacion_v5_v1.json, script render_blendererificar.py)
+  [OK] 0 mm3 de choque entre placa, techo, cuna, equipo y persiana armados
+       (cuna-equipo 7 mm3 = apriete buscado de los nervios de ajuste).
+  [OK] Agua: la cuna sin caras planas hacia arriba (salvo apoyos tapados por el equipo);
+       persiana: solo el marco superior, 3 mm bajo el techo.
+  [OK] Sin partes sueltas; mallas estancas; uniones MANIFOLD.
+  [OK] Sin soportes: persiana 608 mm2 de techos cortos; cuna 163 mm2 de voladizos de 2 mm.
+  [OK] Lengüetas: ~1 % de deformación al abrir (PETG admite 2-3 %).
+  [PENDIENTE] Medir el equipo real con pie de metro (ancho, alto sin asa, espesor).
+  [PENDIENTE] Imprimir la probeta y probar clic, apriete y que no quede juego.
+  [PENDIENTE] Prueba de agua con el conjunto armado (rociar y revisar).
+
+TODO SE IMPRIME SIN SOPORTES. Se revisó cada pieza en su orientación:
+  - Persiana v4: las lamas crecen a 45° desde la cara exterior (dentro del límite de 60°
+    de la K1). Cada ventana termina en chaflán de 45° contra los montantes, así que el
+    techo de la ventana no es un puente plano. Bajo el aro superior quedan puentes cortos. Las orejas de fijación tienen chanfle de 45° por debajo.
+  - Placa, techo y repisa: solo puentes cortos en alojamientos de tuercas y agujeros.
+
+EN LA K1 (cama 220 x 220 mm, impresora cerrada)
+  Son 3 bandejas:
+    Bandeja 1: la placa sola
+    Bandeja 2: el techo y la repisa juntos
+    Bandeja 3: la persiana sola (de pie, 134 mm de alto)
+    Bandeja 4: la cuna sola (acostada sobre la espalda); antes, la probeta de ajuste
+  Si la placa original YA se imprimió, no hace falta repetirla: basta con hacerle
+  4 agujeros de 2,5 mm, a 4 mm de cada borde lateral y a 75 mm y 120 mm del borde inferior.
+
+  Creality Print:
+    Filamento:        PETG (perfil genérico PETG de la K1). Resiste bien el calor y la
+                      humedad del invernadero.
+                      NO usar PLA: se deforma con el calor del invernadero.
+                      Color blanco. Sin carga metálica ni de carbono (afecta el 4G).
+    Boquilla / capa:  0,4 mm / 0,20 mm, ancho de línea 0,42-0,45 mm
+    Paredes:          3 (las lamas y montantes de 1,8 mm quedan macizos)
+    Capas sup./inf.:  4 / 4
+    Relleno:          25 % giroide
+    Soportes:         DESACTIVADOS
+    Adherencia:       brim de 5 mm en la persiana (es alta y angosta) y en la placa.
+                      Con PETG la tapa puede ir cerrada; si la boquilla se tapa
+                      (calor acumulado), sacar la tapa superior de vidrio.
+    Ventilador:       el del perfil PETG de la K1 (moderado, ~40-50 %).
+    Solo para la persiana (piezas altas y delgadas):
+      Velocidad:      bajar paredes exteriores/interiores a 80-100 mm/s
+                      (la K1 viene muy rápida y sacude las lamas).
+      Tiempo mín. de capa: 8 s, para que cada capa enfríe antes de la siguiente.
+      Z-hop (elevación en retracción): activado, 0,4 mm, para que la boquilla no
+                      golpee las lamas al moverse entre ellas.
+      Hilos:          el PETG tiende a hacer hilos: filamento seco (secar 4 h a 65 °C
+                      si ha estado al aire) y retracción del perfil de la K1.
+    Consumo aprox. en PETG: persiana v2 ~85 g (v1 ~83 g); conjunto completo ~210-230 g.
+
+TORNILLERÍA (acero inoxidable)
+  Del protector original:
+    4 tornillos M3 x 10 mm cabeza avellanada + 4 tuercas M3 (techo y repisa)
+    Muro:  3 tornillos 4 x 40 mm + 3 tarugos de 6 mm
+    Poste: 2 abrazaderas sin fin inox, banda de 12 mm (poste de 40 a 90 mm)
+  Para la persiana:
+    4 tornillos autorroscantes para plástico 2,9 x 6,5 mm, cabeza plana
+
+MONTAJE
+  1. Armar placa + repisa + techo igual que el protector original.
+  2. Fijar la placa al muro o al poste.
+  3. Apoyar el equipo en la repisa y pasar su asa por el gancho superior.
+  4. Calzar la persiana desde el frente (entra bajo el techo) y atornillarla a la placa
+     por sus 4 orejas laterales.
+  Para ver la pantalla o retirar el equipo: sacar los 4 tornillos y tirar la persiana
+  hacia adelante. Los datos llegan igual por 4G a la nube sin abrirla.
+
+INSTALACIÓN EN INVERNADERO
+  - A 1,5 m de altura; si se puede, no justo frente a un aspersor o nebulizador.
+  - Frente hacia el sur (en Chile) o hacia el lado con menos sol directo.
+  - Con fertirriego, enjuagar con agua limpia de vez en cuando para que las sales
+    no tapen los canales ni la rejilla del sensor.
+  - Mantener cerrada la tapa de goma del USB del equipo.
+
+ANTES DE IMPRIMIR TODO
+  - Imprimir primero la persiana y probarla con la placa y el techo ya armados.
+  - Holgura entre la persiana y el equipo: unos 6 mm por los costados y 9 mm al frente.
